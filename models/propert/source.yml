@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw_cust
+    schema: SF_SCHEMA
+    database: SNOWFLAKE_DBT_DATA
+    tables:
+      - name: cust #logical name
+        identifier: CUSTOMERS #original table name
