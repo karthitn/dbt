@@ -39,4 +39,10 @@ models:
   my_new_project:
     # Applies to all files under models/example/
     example:
+      +materialized: view
+      +transient: false
+      +query_tag: 'dbt'
+    raw:  
       +materialized: table
+      +transient: false
+      +query_tag: 'dbt'
