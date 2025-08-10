@@ -15,3 +15,8 @@ sources:
         identifier: CUSTOMER_MASTER
       - name: cust_order_sync
         identifier: CUSTOMER_ORDERS_SYNC  
+      - name : SUPPLY_CHAIN_ORDERS 
+      - name : CUSTOMERS_SCD_SRC
+      
+        
+        
