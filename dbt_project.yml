@@ -46,3 +46,27 @@ models:
       +materialized: table
       +transient: false
       +query_tag: 'dbt'
+      +database: DBT_OUTPUT
+      +schema: DBT_SCHEMA
+    silver:
+      +materialized: table
+      +transient: false
+      +query_tag: 'dbt'
+      +database: DBT_OUTPUT
+      +schema: SILVER_SCH
+      customer_order: #model name that uses append strategy
+        +materialized: incremental
+        +incremental_strategy: append
+      incremental_merge:   #model name that uses merge strategy
+        +materialized: incremental
+        +incremental_strategy: merge
+      delete_merge:   #model name that uses delete+insert strategy
+        +materialized: incremental
+        +incremental_strategy: delete+insert
+      orders_customers:   #model name that uses delete+insert strategy
+        +materialized: incremental
+        +incremental_strategy: merge
+        
+        
+        
+        
